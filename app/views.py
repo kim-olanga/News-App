@@ -7,12 +7,12 @@ def index():
     """
     View root page function that returns the index page and its data
     """
-    headlines_articles = get_articles('headlines')
+    articles = get_articles('articles')
     international_news_articles = get_articles('international_news')
 
     title = 'Home - Welcome to the best and reliable Headlines Scoop Website Online'
 
-    return render_template('index.html', title = title,headlines = headlines_articles,international_news_articles = international_news_articles)
+    return render_template('index.html', title = title,articles = articles,international_news_articles = international_news_articles)
 
 @app.route('/news/<int:news_id>')
 def news(news_id):
