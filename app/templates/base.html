@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title> {{ title }} </title>
+    {% else %} 
+    <title> Welcome to the best and reliable Headlines Scoop Website Online </title>
+    {% endif %}
+</head>
+<body>
+    <!-- Content block -->
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

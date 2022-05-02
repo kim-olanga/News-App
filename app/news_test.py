@@ -10,7 +10,7 @@ class NewsTest(unittest.TestCase):
         """
         Set up method that will run before every Test
         """
-        self.new_news = News(3456,'Python Is Awsome','Articles that will blow your mind','https://image.newsapi.org/t/p/v2/kls25hgfd',6.4,345676)
+        self.new_news = News(3456,'Lorenz Meyer','Articles that will blow your mind','What makes Lorenzo happy','https://urlToImage/','2022-05-02T06:54:51Z')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_news,News))

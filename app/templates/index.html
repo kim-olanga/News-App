@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,16 @@
     {% endif %}
 </head>
 <body>
-    
+    <!--Content block -->
+    {% block content %}
+    <h2> Headlines </h2>
+    <ul>
+             {{ macro.displayNewsList(headlines) }}
+    </ul>
+    <h2> International News </h2>
+    <ul>
+            {{ macro.displayNewsList(international_news) }}
+    </ul>
+    {% endblock %}
 </body>
 </html>
