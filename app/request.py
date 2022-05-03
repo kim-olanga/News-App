@@ -1,10 +1,9 @@
 from app import app
 import urllib.request,json
-from models import source
-from models Article import Article
+from .models import Source,Article
 from datetime import datetime
 
-Source = source.Source
+# Source = source.Source
 
 def configure_request(app):
     global api_key,base_url,article_url,top_url
