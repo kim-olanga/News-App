@@ -1,13 +1,74 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title> {{ title }} </title>
-    <title> Welcome to the best and reliable Headlines Scoop Website Online </title>
-    {% endif %}
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <!-- Styles block -->
+
+        {% block styles%}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock %}
+        <!-- Content block -->
+        {% block content %}
+
+        <div class="main">
+            <h3 class="text-center font-weight-bolder"> TRENDING NEWS </h3>
+            <div class="flex-wrap justify-content-center d-grid">
+            {% for i in top %}
+
+                <div class="card col-lg-3 col-md-6 " style="background-color:thistle; width: 42rem; display: block; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 20px; margin-right: 20px; padding-right: 20px;">
+                    <img src="{{i.image}} " class="card-img-top" alt="no image" style="height: 300px; width: 400px;">
+                    <div class="card-body">
+                    <h5 class="card-title font-weight-bold">{{i.title}}</h5>
+                    <p class="card-text">{{i.description}}</p>
+                    <p class="card-text font-italic">Source : {{i.source}}</p><br><br>
+                    <a href="{{i.link}}" class="btn btn-info"> Details... </a>
+                    </div><br>
+                </div>
+            
+            {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Sources section  -->
+        <aside class="sidebar">
+            <h3 class="bg-dark text-white">Science </h3>
+            <ul class="list-group">
+             {{macro.displaySources(science)}}
+            </ul>
+            <h3 class="bg-dark text-white">Business </h3>
+            <ul class="list-group">
+             {{macro.displaySources(business)}}
+            </ul>
+            <h3 class="bg-dark text-white">Health </h3>
+            <ul class="list-group">
+             {{macro.displaySources(health)}}
+            </ul>
+            <h3 class="bg-dark text-white">Technology </h3>
+            <ul class="list-group">
+             {{macro.displaySources(technology)}}
+            </ul>
+            <h3 class="bg-dark text-white">General </h3>
+            <ul class="list-group">
+             {{macro.displaySources(general)}}
+            </ul>
+            <h3 class="bg-dark text-white">Entertainment </h3>
+            <ul class="list-group">
+             {{macro.displaySources(entertainment)}}
+            </ul>
+            <h3 class="bg-dark text-white">Sports </h3>
+            <ul class="list-group">
+             {{macro.displaySources(sports)}}
+            </ul>
+          
+        </aside>
+            
+
+        {% endblock %}
+ </body>
 </html>
