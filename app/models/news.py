@@ -1,12 +1,13 @@
-class News:
+class Sources:
     """
     News class to define News objects
     """
-    def __init__(self,id,title,overview,poster,vote_average,vote_count):
+    def __init__(self,id,title,author,url,urlToImage,description,PublishedAt):
         self.id = id
         self.title = title
-        self.overview = overview
-        self.poster = 'https://image.newsapi.org/t/p/v2/kls25hgfd'+ poster
-        self.vote_average = vote_average
-        self.vote_count = vote_count
+        self.author = author
+        self.url = url
+        self.urlToImage = urlToImage
+        self.description = description
+        self.publishedAt = PublishedAt
         
