@@ -1,4 +1,4 @@
-from app import app
+# from app import app
 import urllib.request,json
 from .models import Source,Article
 from datetime import datetime
@@ -15,7 +15,7 @@ def get_sources(category):
     """
     Function that gets the json response to our url requests
     """
-    get_sources_url = 'https://newsapi.org/v2/sources?category={}&language=en&apiKey=ba958fb1a45945d59f5dcedc69137c25'.format(category,api_key)
+    get_sources_url = 'https://newsapi.org/v2/sources?category={}&language=en&apiKey=1c2e4612d4764934ad588e621b350633'.format(category,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
@@ -48,7 +48,7 @@ def process_results(source_list):
     return source_results
 
 def get_articles(id):
-    get_article_url = 'https://newsapi.org/v2/everything?q={}&apikey=ba958fb1a45945d59f5dcedc69137c25'.format(id,api_key)
+    get_article_url = 'https://newsapi.org/v2/everything?q={}&apikey=1c2e4612d4764934ad588e621b350633'.format(id,api_key)
 
     with urllib.request.urlopen(get_article_url) as url:
         article_details_data = url.read()

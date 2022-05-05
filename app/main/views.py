@@ -1,8 +1,10 @@
 from flask import render_template
-from app import app 
-from .request import get_articles,get_sources
+# from app import app 
+from . import main
+from ..request import get_articles,get_sources
+from ..models import Source, Article
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -18,7 +20,7 @@ def index():
     return render_template('index.html',general =general_news, business =business_news,technology = technology_news,
     science = science_news, health = health_news,entertainment = entertainment_news,sports = sports_news)
 
-@app.route('/article/<id>')
+@main.route('/article/<id>')
 def article(id):
 
     '''
