@@ -1,0 +1,27 @@
+.sidebar, .main{
+    transition: all .3s ease-out;
+    overflow-y: auto;
+    position: fixed;
+    top: 64px;
+    bottom: 0;
+  
+  }
+  
+  .sidebar{
+    width:25%;
+    overflow-wrap: break-word;
+  }
+  
+  .main{
+  background-color:rgb(217,237,248);
+  position: fixed;
+  width: 75%;
+  right: 0;
+  padding: 20px;
+  
+  }
+  
+  /* ul {
+      list-style-type: none;
+    
+  } */
