@@ -5,7 +5,7 @@
 - This application is an easy way for me and you, the public, to access news articles that are local and international.
 
 # live link.
-- 
+- https://news-scoop.herokuapp.com/
 
 # Setup Instructions.
 - On Github, create a new repository.
