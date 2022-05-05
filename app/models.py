@@ -1,15 +1,12 @@
 class Source:
-    """
+    '''
     Source class to define source objects
-    """
-    def __init__(self,source,author,title,description,url,urlToImage,publishedAt):
-        self.source = source
-        self.author = author
-        self.title = title
-        self.description = description
-        self.url = url
-        self.urlToImage = urlToImage
-        self.publishedAt = publishedAt
+    '''
+
+    def __init__(self,id,name,category):
+        self.id = id
+        self.name = name
+        self.category = category
 
 class Article:
     '''
@@ -24,4 +21,18 @@ class Article:
         self.description = description
         self.link = link
         self.image = image
-        self.publishDate = publishDate        
+        self.publishDate = publishDate
+
+class Top:
+    '''
+    Top headlines class to define headlines objects
+    '''
+
+    def __init__(self, source, author, title,  description, link, image):
+
+        self.source = source
+        self.author = author
+        self.title = title
+        self.description = description
+        self.link = link
+        self.image = image
